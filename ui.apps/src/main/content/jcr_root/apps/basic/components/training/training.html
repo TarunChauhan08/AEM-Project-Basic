@@ -1,0 +1,12 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+    <clientlib data-sly-call="${clientLib.all @ categories='training'}" data-sly-unwrap/>
+    </head>
+<div class="training-course">
+ <div data-sly-use.model="com.practice.core.models.TrainingModel">
+ <div class="title"> ${model.courseTitle} </div>
+ <div class="duration"> ${model.courseDuration} </div>
+ <div class="type"> ${model.courseType} </div>
+ ${model.message}
+ </div>
+ </div>
+ 
