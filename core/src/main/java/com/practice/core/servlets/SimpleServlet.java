@@ -40,7 +40,7 @@ import java.io.IOException;
 @SlingServletResourceTypes(
         resourceTypes="basic/components/page",
         methods=HttpConstants.METHOD_GET,
-        extensions="txt")
+        extensions="json")
 @ServiceDescription("Simple Demo Servlet")
 public class SimpleServlet extends SlingSafeMethodsServlet {
 
@@ -50,7 +50,7 @@ public class SimpleServlet extends SlingSafeMethodsServlet {
     protected void doGet(final SlingHttpServletRequest req,
             final SlingHttpServletResponse resp) throws ServletException, IOException {
         final Resource resource = req.getResource();
-        resp.setContentType("text/plain");
+        resp.setContentType("application/json");
         resp.getWriter().write("Title = " + resource.getValueMap().get(JcrConstants.JCR_TITLE));
     }
 }

@@ -5,6 +5,6 @@ import com.practice.core.services.TrainingService;
 public class TrainingServiceImpl implements TrainingService{
     @Override
     public String getMessage(String name){
-        return name;
+        return name + "Chauhan";
     }
 }
